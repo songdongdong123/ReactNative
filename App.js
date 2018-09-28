@@ -9,7 +9,8 @@ import {
   StyleSheet,
   View
 } from 'react-native';
-import TextComponents from './pages/nav';
+// import TextComponents from './pages/nav';
+import NavTest from './pages/navigator_demo/index';
 
 // 这是判断系统的一个函数
 // const instructions = Platform.select({
@@ -22,7 +23,8 @@ export default class App extends Component<Props> {
   render() {
     return (
       <View style={styles.container}>
-        <TextComponents></TextComponents>
+        {/* <TextComponents></TextComponents> */}
+        <NavTest></NavTest>
       </View>
     );
   }
