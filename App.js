@@ -11,6 +11,7 @@ import {
 } from 'react-native';
 // import TextComponents from './pages/nav';
 import NavTest from './pages/navigator_demo/index';
+import TabNavigator from './pages/navigator_demo/TabNavigator';
 
 // 这是判断系统的一个函数
 // const instructions = Platform.select({
@@ -24,7 +25,8 @@ export default class App extends Component<Props> {
     return (
       <View style={styles.container}>
         {/* <TextComponents></TextComponents> */}
-        <NavTest></NavTest>
+        {/* <NavTest></NavTest> */}
+        <TabNavigator></TabNavigator>
       </View>
     );
   }
