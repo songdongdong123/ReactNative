@@ -1,8 +1,9 @@
 import React from 'react';
-import {View, Text, Button, StyleSheet } from 'react-native';
+import {View, StyleSheet } from 'react-native';
+import MyButton from '../../components/Button';
 export default class HomeScreen extends React.Component {
   static navigationOptions = {
-    title: 'Home'
+    title: 'HomeScreen'
   }
   constructor(props){
     super(props);
@@ -11,15 +12,21 @@ export default class HomeScreen extends React.Component {
   render () {
     return (
       <View style={styles.container}>
-        <Text style={styles.text}>HomeScreen</Text>
-        <Button title="页面跳转"
+        <MyButton text='页面1' 
           onPress={() => {
-            this.props.navigation.navigate('Details', {
-              id: 88,
-              text: '你好'
-            });
+            this.props.navigation.navigate('Page1')
           }}
-        ></Button>
+        />
+        <MyButton text='页面2' 
+          onPress={() => {
+            this.props.navigation.navigate('Details')
+          }}
+        />
+        <MyButton text='页面3' 
+          onPress={() => {
+            this.props.navigation.navigate('CostomerScreen')
+          }}
+        />
       </View>
     )
   }
@@ -28,7 +35,8 @@ export default class HomeScreen extends React.Component {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: 'blue'
+    backgroundColor: 'blue',
+    alignItems: 'center',
   },
   text:{
     textAlign:'center',
