@@ -6,7 +6,8 @@ import Page1 from '../pages/demopage/page1';
 import Page2 from '../pages/demopage/page2';
 import Page3 from '../pages/demopage/page3';
 import Detail from '../pages/demopage/detail';
-import Login from '../pages/Login/login';
+import Start from '../pages/Start/Start.js';
+import Login from '../pages/Login/index';
 
 const AppStackNavigator = createBottomTabNavigator({
   Home: {
@@ -79,9 +80,10 @@ export const HomeStack = createStackNavigator({
     }
   },
   Detail: Detail,
+  Start: Start,
   Login: Login
 }, {
-  initialRouteName: 'Login'
+  initialRouteName: 'Start'
 });
 
 const styles = StyleSheet.create({
