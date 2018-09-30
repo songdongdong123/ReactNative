@@ -1,4 +1,4 @@
-package com.initrn;
+package com.annei;
 
 import android.app.Application;
 

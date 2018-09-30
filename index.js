@@ -7,4 +7,4 @@ YellowBox.ignoreWarnings([
 ]);
 import App from './App';
 
-AppRegistry.registerComponent('initRN', () => App);
+AppRegistry.registerComponent('AnNei', () => App);

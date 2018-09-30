@@ -1,13 +1,13 @@
 import React, { Component } from 'react';
-import LinearGradient from 'react-native-linear-gradient';
 import {
   StyleSheet,
   View,
   Text,
   StatusBar,
   Dimensions,
-  BVLinearGradient,
-  Image
+  Image,
+  Button,
+  TouchableOpacity
 } from 'react-native';
 const {width, height} = Dimensions.get('window');
 export default class Trending extends Component {
@@ -26,15 +26,14 @@ export default class Trending extends Component {
         >  
         </StatusBar>
         <Image style={styles.image} source={require(`../../res/images/loginbg.png`)}/>
-          <LinearGradient colors={['#9f678c', '#718697', '#2b4963']} style={styles.LinearGradient}>                
-            <View >                    
-              <Text >用户登录</Text>                
-            </View>            
-          </LinearGradient>
         <View style={styles.bottom}>
-          <View style={styles.LoginButton}>
-            <Text style={styles.text}>登录</Text>
-          </View>
+          <TouchableOpacity style={styles.buttoncontainer}
+            onPress={() => this.props.navigation.navigate('Login')}
+          >
+            <View style={styles.LoginButton}>
+              <Text style={styles.text}>登录</Text>
+            </View>
+          </TouchableOpacity>
         </View>
       </View>
     );
@@ -64,16 +63,12 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
   },
-  LoginButton: {
-    backgroundColor: '#fa628e',
-    width:300,
-    height:50,
+  buttoncontainer: {
     justifyContent: 'center',
     alignItems: 'center',
-    shadowColor:'#7a4974',
-    shadowOffset:{width:10,height:10},
-    shadowRadius:3,
-    shadowOpacity:0.8
+    width:300,
+    backgroundColor: '#fc3971',
+    height:50
   },
   text:{
     color: '#fff',
