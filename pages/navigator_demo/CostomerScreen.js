@@ -31,7 +31,7 @@ export default class CostomerScreen extends React.Component {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: 'blue'
+    backgroundColor: 'blue',
   },
   text:{
     textAlign:'center',

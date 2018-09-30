@@ -1,40 +1,5 @@
-/**
- * Sample React Native App
- * https://github.com/facebook/react-native
- * @flow
- */
+import {HomeStack} from './navigators/AppNavigators1';
+// import {AppStackNavigator} from './navigators/AppNavigators';
 
-import React, { Component } from 'react';
-import {
-  StyleSheet,
-  View
-} from 'react-native';
-// import TextComponents from './pages/nav';
-import NavTest from './pages/navigator_demo/index';
-import TabNavigator from './pages/navigator_demo/TabNavigator';
-
-// 这是判断系统的一个函数
-// const instructions = Platform.select({
-//   ios: '这是Ios特有的',
-//   android: '这是ANDROID特有的',
-// });
-
-type Props = {};
-export default class App extends Component<Props> {
-  render() {
-    return (
-      <View style={styles.container}>
-        {/* <TextComponents></TextComponents> */}
-        {/* <NavTest></NavTest> */}
-        <TabNavigator></TabNavigator>
-      </View>
-    );
-  }
-}
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#F5FCFF',
-  }
-});
+export default HomeStack;
+// export default AppStackNavigator;
